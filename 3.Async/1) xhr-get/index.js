@@ -2,14 +2,14 @@ function xhrGet(url) {
   return new Promise(function (resolve, reject) {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', url);
-    xhr.setRequestHeader('content-type', 'application/json')
-    
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.responseType = 'json'
     xhr.onload = () => {
       if (xhr.status == 201 || xhr.status == 200) {
-        resolve(xhr.responseText)
+        resolve(xhr.response)
       }
       else {
-        let err = xhr.responseText
+        let err = xhr.response
         reject(err)
       }
     }
