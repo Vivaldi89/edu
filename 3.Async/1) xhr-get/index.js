@@ -5,11 +5,11 @@ function xhrGet(url) {
     xhr.setRequestHeader('content-type', 'application/json')
     
     xhr.onload = () => {
-      if (this.status == 201 || this.status == 200) {
-        resolve(this.responseText)
+      if (xhr.status == 201 || xhr.status == 200) {
+        resolve(xhr.responseText)
       }
       else {
-        let err = this.responseText
+        let err = xhr.responseText
         reject(err)
       }
     }
