@@ -8,7 +8,24 @@
  */
 
 class TokenService {
-  // Напиши свой код здесь
+  constructor() {
+    this.subscriber = () => {};
+    this.token = "";
+ }
+ subscribe(data) {
+    typeof data === 'function' ? this.subscriber = data : null;
+ };
+ setToken(t) {
+    this.token = t
+    this.subscriber(t);
+ }
+ removeToken() {
+    this.token = null
+    this.subscriber(this.token);
+ }
+ getToken() {
+    return this.token
+ }
 }
 
 window.TokenService = TokenService;
