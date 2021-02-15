@@ -1,7 +1,7 @@
 # Основы Javascript для Exceed team 
 # fjkhgkdfhgk
 ## Описание
-
+## gjdfkgdfgfdg
 Обучающий проект для стажёров Exceed Team.
 
 Последовательность разделов обучения:
